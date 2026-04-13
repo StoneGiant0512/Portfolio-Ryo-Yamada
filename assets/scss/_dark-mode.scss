@@ -92,6 +92,39 @@ body[data-theme="dark"] {
   .languages .item .title {
 	  color: $dm-text-color;
   }
+
+  .skills .skill-donuts .skill-donut__chart {
+	  background: conic-gradient(
+		  hsl(148, 52%, calc(14% + (var(--fill) / 100) * 62%)) calc(var(--fill) * 1%),
+		  rgba(255, 255, 255, 0.12) 0
+	  );
+  }
+  .skills .skill-donuts .skill-donut__hole {
+	  background: lighten($dm-background, 3%);
+  }
+  .skills .skill-donuts .skill-donut__label,
+  .skills .skill-donuts .skill-donut__title {
+	  color: $dm-text-color;
+  }
+  .skills .skill-donuts .skill-donut__level {
+	  color: $dm-text-color-secondary;
+  }
+
+  .skills .skill-donuts .skill-ai-expert__svg text:first-of-type {
+	  fill: $dm-text-color;
+  }
+  .skills .skill-donuts .skill-ai-expert__svg text:last-of-type {
+	  fill: lighten($color-2, 8%);
+  }
+  .skills .skill-donuts .skill-ai-expert__kicker {
+	  color: lighten($color-2, 12%);
+  }
+  .skills .skill-donuts .skill-ai-expert__title {
+	  color: $dm-text-color;
+  }
+  .skills .skill-donuts .skill-ai-expert__svg {
+	  filter: drop-shadow(0 4px 14px rgba(58, 170, 100, 0.25));
+  }
   
   .list ul li a, .credits ul li a {
 	  color: inherit;

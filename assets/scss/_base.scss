@@ -104,6 +104,8 @@ a.dotted-link {
     
     .profile-image {
         margin-right: 30px;
+        max-width: 400px;
+        width: 100%;
     }
     .profile-content {
         
@@ -366,6 +368,91 @@ a.dotted-link {
     .intro {
         margin-bottom: 30px;
     }
+
+    .skill-donuts {
+        .skill-donut__chart {
+            --fill: 90;
+            width: 132px;
+            height: 132px;
+            margin: 0 auto 12px;
+            position: relative;
+            border-radius: 50%;
+            background: conic-gradient(
+                hsl(148, 52%, calc(10% + (var(--fill) / 100) * 68%)) calc(var(--fill) * 1%),
+                darken($smoky-white, 8%) 0
+            );
+        }
+        .skill-donut__hole {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 58%;
+            height: 58%;
+            border-radius: 50%;
+            background: #fff;
+            z-index: 0;
+        }
+        .skill-donut__label {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1.1;
+            color: darken($color, 15%);
+            pointer-events: none;
+        }
+        .skill-donut__title {
+            font-size: 16px;
+            margin: 0 0 6px;
+            color: darken($color, 15%);
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif;
+        }
+        .skill-donut__level {
+            font-size: 14px;
+            color: lighten($color, 10%);
+            font-family: "Lato", arial, sans-serif;
+        }
+
+        .skill-ai-expert {
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 2px;
+        }
+        .skill-ai-expert__visual {
+            width: 132px;
+            height: 132px;
+            margin: 0 auto 10px;
+        }
+        .skill-ai-expert__svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            filter: drop-shadow(0 4px 12px rgba(58, 170, 100, 0.15));
+        }
+        .skill-ai-expert__kicker {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: $color-2;
+            font-family: "Montserrat", sans-serif;
+            margin-top: 2px;
+        }
+        .skill-ai-expert__title {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif;
+            color: darken($color, 15%);
+        }
+    }
+
     .skillset {
 
         .item {
@@ -393,7 +480,8 @@ a.dotted-link {
         }
         .level-bar-inner {
             height: 15px;
-            background: lighten($color-2, 15%);
+            --skill-level: 75;
+            background: hsl(148, 52%, calc(10% + (var(--skill-level) / 100) * 68%));
         }
     }
     .svg-inline--fa {
